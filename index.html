@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>myWeather</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style/weather-icons-master/css/weather-icons.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+
+<body>
+    <div class="body">
+        <div class="container nav-bar">
+            <div class="title">
+                <h1>myWeather</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search.." id="search-bar">
+                <div><span class="glyphicon glyphicon-search" onclick="getCity()"></span></div>
+            </div>
+        </div>
+        <div class="container div-info">
+            <div class="waiting-div">
+                <p>Please look for a city</p>
+                <div class="icons">
+                    <i class="wi wi-rain"></i>
+                    <i class="wi wi-cloud"></i>
+                    <i class="wi wi-snow"></i>
+                    <i class="wi wi-day-sunny"></i>
+                </div>
+            </div>
+            <div class="not-waiting-div">
+                <div class="main-info">
+                    <div class="city-name">
+                        <h2></h2>
+                        <h4></h4>
+                        <div>
+                            <p></p>
+                            <i class="wi wi-humidity"></i>
+                        </div>
+                    </div>
+                    <div class="degress">
+                        <h1></h1>
+                    </div>
+                </div>
+                <div class="extra-info">
+                    <table class="table-condensed">
+                        <thead>
+                            <tr>
+                                <td>Date</td>
+                                <td><i class="wi wi-day-rain"></i></td>
+                                <td><i class="wi wi-thermometer"></i></td>
+                                <td><i class="wi wi-humidity"></i></td>
+                                <td><i class="wi wi-strong-wind"></i></td>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-more-info"></tbody>
+                    </table>
+                    <!--                    <div class="phone-view"></div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script/main-js.js"></script>
+</body>
+
+</html>
