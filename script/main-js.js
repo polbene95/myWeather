@@ -4,8 +4,7 @@ $(".waiting-div").show();
 function getCity() {
 
     var getCity = $("#search-bar").val();
-
-    $.ajax('http://api.openweathermap.org/data/2.5/forecast?q=' + getCity + ',uk&APPID=013e94b7065991843e6435dd41005e59').done(function (json) {
+    $.ajax('http://api.openweathermap.org/data/2.5/forecast?q=' + getCity + '&APPID=013e94b7065991843e6435dd41005e59').done(function (json) {
         data = json;
         console.log(data);
         printInfo();
@@ -40,54 +39,13 @@ function printInfo() {
     $(".city-name h4").text(description + " (" + tempMaxC + "º / " + tempMinC + "º )");
     $(".city-name div p").text(humidity);
 
-
-    //    for (let i = 0; i < 9; i++) {
-    //        var tbody = document.getElementById("tbody-more-info");
-    //        var row = document.createElement("tr");
-    //
-    //        var date = list[i].dt_txt;
-    //        var splitDate = date.split(" ")[1];
-    //        var weather = list[i].weather[0].main;
-    //        var temp = list[i].main.temp - 273.15;
-    //        var tempC = temp.toString().split(".")[0];
-    //
-    //        tempMax = list[i].main.temp_max - 273.15;
-    //        tempMin = list[i].main.temp_min - 273.15;
-    //
-    //        tempMaxC = tempMax.toString().split(".")[0];
-    //        tempMinC = tempMin.toString().split(".")[0];
-    //
-    //        var wind = list[i].wind.speed;
-    //
-    //        var icon = document.createElement("i")
-    //        if (weather == "Rain") {
-    //            $(icon).addClass("wi wi-rain")
-    //        }
-    //        if (weather == "Clouds") {
-    //            $(icon).addClass("wi wi-cloud")
-    //        }
-    //        if (weather == "Snow") {
-    //            $(icon).addClass("wi wi-snow")
-    //        }
-    //        if (weather == "Clear") {
-    //            $(icon).addClass("wi wi-day-sunny")
-    //        }
-    //
-    //        row.insertCell().innerHTML = splitDate;
-    //        row.append(icon)
-    //        row.insertCell().innerHTML = tempC + " º"
-    //        row.insertCell().innerHTML = tempMaxC + "º / " + tempMin + " º"
-    //        row.insertCell().innerHTML = wind + " m/s";
-    //
-    //        tbody.append(row);
-    //
-    //    }
-
     extraInfo();
 }
 
 function extraInfo() {
     var list = data.list;
+    var extraInfo = document.getElementById("extra-info");
+    extraInfo.innerHTML="";
     for (let i = 0; i < 9; i++) {
 
         var mainDiv = document.createElement("div");

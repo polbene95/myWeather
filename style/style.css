@@ -5,16 +5,18 @@
     height: 100vh;
     padding: 30px 0;
     font-family: 'Grand Hotel', cursive;
+    display: grid;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
 
 .container {
-    /*    border: 2px solid #c3e9c3;*/
     border-radius: 25px;
-    /*    background: #ecf0ec;*/
     background-color: rgba(255, 255, 255, 0.7);
 }
 
 .nav-bar {
+    grid-row-start: 1;
     display: flex;
     justify-content: space-between;
 }
@@ -44,8 +46,13 @@
 }
 
 .div-info {
-    min-height: 500px;
+    grid-row-start: 2;
+    grid-row-end: 11;
+/*    min-height: 500px;*/
     margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-info {
@@ -128,7 +135,8 @@ thead {
     border: none;
 }
 .waiting-div {
-    height: 500px;
+    grid-row-start: 5;
+    grid-row-end: 10;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,7 +144,12 @@ thead {
     font-size: 70px;
 }
 .waiting-div div {
-    width: 80%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+.not-waiting-div {
+    grid-row-start: 2;
+    grid-row-end: 11;
+    width: 100%;
 }
