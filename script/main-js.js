@@ -4,7 +4,7 @@ $(".waiting-div").show();
 function getCity() {
 
     var getCity = $("#search-bar").val();
-    $.ajax('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?q=' + getCity + '&APPID=013e94b7065991843e6435dd41005e59').done(function (json) {
+    $.ajax('https://api.openweathermap.org/data/2.5/forecast?q=' + getCity + '&APPID=013e94b7065991843e6435dd41005e59').done(function (json) {
         data = json;
         console.log(data);
         printInfo();
