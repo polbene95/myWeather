@@ -1,6 +1,10 @@
 $(".not-waiting-div").hide();
 $(".waiting-div").show();
-
+document.getElementById("search-bar").onkeydown = function () {
+            if (event.keyCode == 13) {
+                getCity();
+            };
+        }
 function getCity() {
 
     var getCity = $("#search-bar").val();
@@ -10,12 +14,15 @@ function getCity() {
         printInfo();
         $(".not-waiting-div").show();
         $(".waiting-div").hide();
+        
     }).fail(function () {
         $(".not-waiting-div").hide();
+        $(".waiting-div p").text(getCity + " not found");
         $(".waiting-div").show();
 
     });
-
+    
+    $("#search-bar").text("");
 }
 
 function printInfo() {
@@ -70,7 +77,7 @@ function extraInfo() {
 
         var wind = list[i].wind.speed;
 
-        var icon = document.createElement("i")
+        var icon = document.createElement("i");
         if (weather == "Rain") {
             $(icon).addClass("wi wi-rain")
         }
