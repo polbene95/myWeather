@@ -1,5 +1,5 @@
 .body {
-    background-image: url(images/barcelona-city-background-1.jpg);
+    background-image: url(images/barcelona.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -13,6 +13,176 @@
 .container {
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.7);
+    min-width: 90%;
+}
+
+.nav-bar {
+    grid-row-start: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.title h1 {
+    font-size: 4rem;
+}
+
+.search-container {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+.search-container button {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#search-bar {
+    border-radius: 25px;
+    padding: 0 10px;
+}
+
+.div-info {
+    grid-row-start: 2;
+    grid-row-end: 11;
+    margin: 30px auto;
+    display: flex;
+}
+
+.main-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.extra-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+thead {
+    font-weight: bold;
+}
+
+.degress {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+}
+
+.degress h1 {
+    font-size: 170px;
+}
+
+.city-name {
+    width: 100%;
+}
+
+.today-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.city-name h2 {
+    width: 100%;
+    font-size: 70px;
+}
+
+.city-name h4 {
+    font-size: 30px;
+}
+
+.humidity-div {
+    display: flex;
+    font-size: 30px;
+    width: 11%;
+    padding-left: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.humidity-div p {
+    margin: 0;
+    margin-right: 2px;
+}
+
+.extra-info table {
+    width: 90%;
+    display: none;
+}
+
+.extra-info table td {
+    width: 20%;
+    padding-left: 0px;
+}
+
+.every-time {
+    width: 11%;
+}
+
+.every-time-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-weight: bold;
+}
+
+.last-div {
+    border: none;
+}
+
+.hide-in-mobil {
+    display: none;
+}
+
+.waiting-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 45px;
+    width: 100%;
+}
+
+.waiting-div div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.not-waiting-div {
+    width: 100%;
+}
+
+@media only screen and (min-width: 570px) {
+    .body {
+/*    background-image: url(images/maxresdefault.jpg);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 30px 0;
+    font-family: 'Grand Hotel', cursive;
+    display: grid;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+.container {
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.7);
+    min-width: 90%;
 }
 
 .nav-bar {
@@ -52,17 +222,18 @@
 .div-info {
     grid-row-start: 2;
     grid-row-end: 11;
-    /*    min-height: 500px;*/
     margin: 30px auto;
     display: flex;
+    /*
     align-items: center;
     justify-content: center;
+*/
 }
 
 .main-info {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
 }
 
 .extra-info {
@@ -76,7 +247,7 @@ thead {
 }
 
 .degress {
-    width: 30%;
+    width: 100%;
     height: 200px;
 }
 
@@ -85,10 +256,16 @@ thead {
 }
 
 .city-name {
-    width: 70%;
+    width: 100%;
+}
+
+.today-info {
+    width: 100%;
+    display: flex;
 }
 
 .city-name h2 {
+    width: 100%;
     font-size: 80px;
 }
 
@@ -97,15 +274,17 @@ thead {
     padding-left: 10px;
 }
 
-.city-name div {
+.humidity-div {
     display: flex;
-    font-size: 21px;
+    font-size: 30px;
     width: 11%;
     padding-left: 10px;
-    /*    justify-content: space-around;*/
+    align-items: center;
+    justify-content: center;
 }
 
-.city-name div p {
+.humidity-div p {
+    margin: 0;
     margin-right: 2px;
 }
 
@@ -124,7 +303,7 @@ thead {
     border-right: 1px solid rgba(255, 255, 255, 0.9)
 }
 
-.every-time div {
+.every-time-div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,9 +334,11 @@ thead {
     width: 100%;
 }
 
+}
+
 @media only screen and (min-width: 992px) {
     .body {
-        background-image: url(images/barcelona-city-background-1.jpg);
+        /*        background-image: url(images/barcelona-city-background-1.jpg);*/
         background-repeat: no-repeat;
         background-size: cover;
         height: 100vh;
@@ -170,6 +351,7 @@ thead {
     .container {
         border-radius: 25px;
         background-color: rgba(255, 255, 255, 0.7);
+        min-width: 90%;
     }
     .nav-bar {
         grid-row-start: 1;
@@ -216,6 +398,7 @@ thead {
         width: 100%;
         height: 40%;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
     }
     .extra-info {
@@ -231,6 +414,9 @@ thead {
         width: 30%;
         height: 100%;
     }
+    .main-weather-icon {
+        display: none;
+    }
     .degress h1 {
         font-size: 20rem;
     }
@@ -239,20 +425,28 @@ thead {
     }
     .city-name h2 {
         font-size: 9rem;
+        word-wrap: break-word;
+    }
+    .today-info {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
     }
     .city-name h4 {
         font-size: 4rem;
         padding-left: 10px;
     }
-    .city-name div {
+    .humidity-div {
         display: flex;
         font-size: 21px;
         width: 11%;
         padding-left: 10px;
         font-size: 3rem;
-        /*    justify-content: space-around;*/
+        justify-content: center;
+        align-items: center;
     }
-    .city-name div p {
+    .humidity-div p {
+        margin: 0;
         margin-right: 2px;
     }
     .extra-info table {
@@ -267,13 +461,12 @@ thead {
         width: 11%;
         border-right: 1px solid rgba(255, 255, 255, 0.9)
     }
-    .every-time div {
+    .every-time-div {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 20%;
         font-size: 2.7rem;
-/*        font-weight: bold;*/
     }
     .last-div {
         border: none;
@@ -285,10 +478,15 @@ thead {
         flex-direction: column;
         font-size: 70px;
         width: 100%;
+        word-wrap: break-word;
+    }
+    .waiting-div p {
+        word-wrap: break-word;
     }
     .waiting-div div {
         width: 100%;
         display: flex;
+        word-wrap: break-word;
         justify-content: space-around;
     }
     .not-waiting-div {
