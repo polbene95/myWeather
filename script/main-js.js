@@ -12,7 +12,7 @@ function getCity() {
     $.ajax('https://api.openweathermap.org/data/2.5/forecast?q=' + getCity + '&APPID=013e94b7065991843e6435dd41005e59').done(function (json) {
         data = json;
         console.log(data);
-        backgroundSetter();
+//        backgroundSetter();
         printInfo();
         $(".not-waiting-div").show();
         $(".waiting-div").hide();
