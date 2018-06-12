@@ -131,7 +131,7 @@ function backgroundSetter() {
     if (weather == "Clear") {
         imageUrl = "sun.jpg";
     }
-    $(".body").css('background-image', 'url(/./style/images/' + imageUrl + ')');
+    $(".body").css('background-image', 'url(/style/images/' + imageUrl + ')');
 }
 
 function createIcon(weather) {
